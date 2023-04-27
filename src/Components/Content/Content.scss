@@ -1,0 +1,39 @@
+@import "../../styles/global.scss";
+
+.Content {
+    width: 90%;
+    max-width: 1850px;
+    height: calc(100vh - 140px);
+    min-height: calc(730px - 140px);
+
+    margin: auto;
+    padding: 0 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    @media screen {
+        @media (max-width: 1250px) {
+            padding: 0;
+        }
+        @media (max-width: 1140px) {
+            justify-content: space-between;
+        }
+        @media (max-width: 1050px) {
+            width: 95%;
+        }
+        @media (max-width: 765px) {
+            flex-direction: column-reverse;
+            height: auto;
+            padding-top: 50px;
+        }
+        @media (max-width: 520px) {
+            flex-direction: column;
+            padding: 0px;
+            margin: 0;
+            width: 100%;
+        }
+    }
+}

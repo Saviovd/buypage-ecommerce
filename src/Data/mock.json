@@ -1,0 +1,44 @@
+{
+    "User": {
+        "photo": "/images/image-avatar.png"
+
+    },
+    "Product" : {
+        "images": [
+            {
+                "key": 1,
+                "url": "/images/Products/image-product-1.jpg"
+            },
+            {
+                "key": 2,
+                "url": "/images/Products/image-product-2.jpg"
+            },
+            {
+                "key": 3,
+                "url": "/images/Products/image-product-3.jpg"
+            },
+            {
+                "key": 4,
+                "url": "/images/Products/image-product-4.jpg"
+            }
+        ],
+        
+        "miniatures": {
+            "miniature_1": "images/Products/image-product-1-thumbnail.jpg",
+            "miniature_2": "images/Products/image-product-2-thumbnail.jpg",
+            "miniature_3": "images/Products/image-product-3-thumbnail.jpg",
+            "miniature_4": "images/Products/image-product-4-thumbnail.jpg"
+        }
+    },
+    "Icons": {
+        "menu": "/images/icons/icon-menu.svg",
+        "delete": "/images/icons/icon-delete.svg",
+        "close": "/images/icons/icon-close.svg",
+        "cart": "/images/icons/icon-cart.svg",
+        "next": "/images/icons/icon-next.svg",
+        "previous": "/images/icons/icon-previous.svg",
+        "plus": "/images/icons/icon-plus.svg",
+        "minus": "/images/icons/icon-minus.svg",
+        "logo": "/images/icons/logo.svg"
+    }
+}

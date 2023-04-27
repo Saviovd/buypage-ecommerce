@@ -1,0 +1,268 @@
+@import "../../styles/global.scss";
+
+.Photos {
+    max-width: 400px;
+    
+    .big_image {
+        width: 100%;
+        margin-bottom: 15px;
+
+        border-radius: 15px;
+
+        cursor: pointer;
+
+        @media screen {
+            @media (max-width: 520px) {
+                border-radius: 0;
+            }
+        }
+    }
+    
+    .photo_list {
+        width: 100%;
+        display: flex;
+        gap: 15px;
+
+        .photo_list-item {
+            width: 25%;
+            height: 100%;
+
+            cursor: pointer;
+            position: relative;
+
+
+            .small_image {
+                width: 100%;
+        
+                border-radius: 15px;                
+            }
+            
+            &:hover::after {
+                content: '';
+                position: absolute;
+                width: 98%;
+                height: 93%;
+                left: 0;
+                top: 0;
+                border-radius: 15px;
+                background-color: rgba($color: $--White, $alpha: .5);
+                border: 2px solid $--Orange;
+            }
+        }
+        .active {
+            border: 3px solid $--Orange;
+        }
+
+        @media screen {
+            @media (max-width: 520px) {
+                display: none;
+            }
+        }
+        
+    }
+    .photo_list-modal {
+        position: absolute;
+        transform: translate(0, 230px);
+        width: 400px;
+        left: calc(50% - 200px);
+
+        @media screen {
+            @media (max-width: 740px) {
+                position: inherit;
+                transform: translate(0, 150px);
+                width: 100%;
+                object-fit: cover;
+                left: calc(50% - 200px);
+            }
+            @media (max-width: 660px) {
+                transform: translate(0);
+            }
+
+            @media (max-width: 660px) {
+                transform: translate(0);
+            }
+        }
+    }
+
+    .activeModal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba($color: #000000, $alpha: .5);
+        min-height: 730px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 815px;
+        .big_image {
+            max-width: 500px;
+            max-height: 500px;
+
+            position: relative;
+
+            @media screen {
+                @media (max-width: 660px) {
+                    width: 400px;
+                }
+                @media (max-width: 520px) {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+
+        .next, .previous {
+            width: 70px;
+            height: 70px;
+
+            font-size: 3rem;
+
+            border: 0;
+            border-radius: 100%;
+
+            position: relative;
+
+            cursor: pointer;
+            
+            &:hover {
+                .button {
+                path {        
+                    stroke: $--Orange;
+                }}
+            }
+            @media screen {
+                @media (max-width: 545px) {
+                    display: none;
+                }
+            }
+        }
+        .next {
+            right: 35px;
+
+            @media screen {
+                @media (max-width: 520px) {
+                    right: 100px
+                }
+            }
+        }
+        .previous {
+            left: 35px;
+            z-index: 9;
+        }
+
+        @media screen {
+            @media (max-width: 545px) {
+                position: relative;
+                display: block;
+                background-color: transparent;
+                height: inherit;
+                min-height: 0;
+            }
+            @media (max-width: 545px) {
+                display: i;
+            }
+        }
+    }
+    .close_button {
+        position: relative;
+        left: 560px;
+        bottom: 270px;
+        z-index: 99;
+    
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+
+        .close {
+            path {
+                fill: $--White; 
+                stroke: $--White;
+            }
+        }
+        &:hover {
+            .close {
+            path {
+                stroke: $--Orange;
+                fill: $--Orange;
+            }}
+            @media screen {
+                @media (max-width: 545px) {
+                    display: none;
+                }
+            }
+        }
+
+        @media screen {
+            @media (max-width: 660px) {
+                left: 460px;
+                bottom: 220px;
+            }
+
+        }
+    }
+    
+    .invisible {
+        display: none;
+    }
+    
+    .invisible_arrow {
+        display: none;
+        @media screen {
+            @media (max-width: 520px) {
+                display: block; 
+                width: 50px;
+                height: 50px;
+                font-size: 3rem;
+                border: 0;
+                border-radius: 100%;
+                position: absolute;
+                cursor: pointer;
+                z-index: 9;
+                &:hover {
+                    .button {
+                    path {        
+                        stroke: $--Orange;
+                    }}
+                }
+            }
+        }
+    }
+    .previous {
+        @media screen {
+            @media (max-width: 520px) {
+                left: 10px;
+                top: 345px;
+            }
+        }
+    }
+    .next {
+        @media screen {
+            @media (max-width: 520px) {
+                right: 10px;
+                top: 345px;
+            }
+        }
+    }
+
+    @media screen {
+        @media (max-width: 980px) {
+            max-width: 330px;
+        }
+        @media (max-width: 800px) {
+            max-width: 300px;
+        }
+        @media (max-width: 765px) {
+            margin: 50px 0;
+            width: 85%;
+            max-width: 500px;
+        }
+        @media (max-width: 520px) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    }
